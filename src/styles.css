@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset و Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  direction: rtl !important;
+  text-align: right;
+  background: #eafff3;
+  color: #64748b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+html, body {
+  height: 100%;
+}

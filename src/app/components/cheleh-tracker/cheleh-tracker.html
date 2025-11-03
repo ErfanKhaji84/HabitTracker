@@ -1,0 +1,58 @@
+<!-- src/app/cheleh-tracker/cheleh-tracker.html -->
+
+<div class="page-wrapper">
+  <div class="tracker-container">
+    <div class="tracker-card">
+      <header class="header">
+        <h1>جدول عادت‌سازی</h1>
+        <p style="text-align: right"> نام عادت : {{ habitName}}</p>
+        <p style="text-align: left">  لقمه کوچک :  {{ habitLevel}}</p>
+
+
+      </header>
+
+      <div class="stats">
+        <span>کامل: {{ getStats().completeDays }}</span>
+        <span>اضطراری: {{ getStats().emergencyDays }}</span>
+        <span>ویژه: {{ getStats().specialDays }}</span>
+      </div>
+
+      <div class="days-grid">
+        <div
+          *ngFor="let day of days; let i = index"
+          class="day-cell"
+          [ngClass]="getDayClass(day)"
+          [style.--i]="i"
+          (click)="onDayClick(day)"
+        >
+         <p *ngIf="day.status === DayStatus.EMPTY "> {{ day.dayNumber }} </p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button
+          class="action-btn primary"
+          (click)="onCompleteCheleh()"
+          [disabled]="isCompleteChelehDisabled()"
+        >
+          اتمام چله و شروع چله بعدی
+        </button>
+        <button
+          class="action-btn secondary"
+          (click)="onFailureClick()"
+        >
+          شکست
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<app-failure-modal (cancel)="onFailureCancel()"></app-failure-modal>-->
+
+<app-congratulation-modal
+  *ngIf="showCongratulationModal"
+  [stats]="currentStats"
+  [grade]="currentGrade"
+  (close)="handleCongratulationClose($event)"
+></app-congratulation-modal>

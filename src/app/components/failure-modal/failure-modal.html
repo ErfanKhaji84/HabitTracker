@@ -1,0 +1,29 @@
+<div class="modal-overlay" (click)="cancel()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>💔 دلیل شکست</h2>
+    </div>
+
+    <div class="modal-body">
+      <p class="description">لطفاً دلیل شکست در چله را بنویسید:</p>
+      <textarea
+        [(ngModel)]="reason"
+        placeholder="دلیل خود را اینجا بنویسید..."
+        rows="5"
+        class="reason-input">
+      </textarea>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-secondary" (click)="cancel()">
+        انصراف
+      </button>
+      <button
+        class="btn-primary"
+        [disabled]="!reason.trim()"
+        (click)="submitReason()">
+        ثبت و بازنشانی
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,145 @@
+* {
+  font-family: 'Vazirmatn', 'Shabnam', sans-serif;
+}
+
+/* ظرف اصلی صفحه افزودن عادت */
+.add-habit-container {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  position: relative;
+
+  /* 🎨 پس‌زمینه سبز نعنایی پاستلی، بدون گرادیان‌های تند */
+  background-color: #eafff3; /* رنگ ثابت و یکنواخت */
+  /* اگر می‌خوای یه حس لطیف‌تر و زنده‌تر بده: */
+  background-image: radial-gradient(circle at 30% 10%, rgba(255,255,255,0.3), transparent 70%);
+  background-repeat: no-repeat;
+}
+
+/* 💫 حرکت نرم نور (اختیاری برای ایجاد عمق پاستلی، کاملاً ظریف) */
+@keyframes bgMove {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* کارت اصلی افزودن عادت با افکت Glassmorphism */
+.add-habit-card {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  width: 95%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+/* ===== هدر کارت ===== */
+.add-habit-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  text-align: right;
+  direction: rtl;
+}
+
+.add-habit-header h2 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* دکمه برگشت */
+.back-btn {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  color: #555;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(220, 220, 220, 0.4);
+  transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.1);
+}
+
+/* ===== فرم اصلی ===== */
+.add-habit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: right;
+  direction: rtl; /* محتویات راست‌چین */
+}
+
+/* ورودی‌ها */
+.habit-input {
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  outline: none;
+  color: #333;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 10px rgba(200, 200, 200, 0.25);
+  transition: all 0.3s ease;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.habit-input::placeholder {
+  text-align: right; /* متن placeholder فارسی */
+  color: #777;
+}
+
+/* ===== دکمه ارسال ===== */
+.submit-btn {
+  margin-top: 1.6rem;
+  align-self: flex-end;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+    0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #ffffff 0%, #f9fffc 100%);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(145deg, #d2ffeb 0%, #ffffff 100%);
+  transform: translateY(-2px);
+}
+
+/* ===== کلاس رنگ صورتی اپشنال برای تم خاص ===== */
+.pink {
+  background: linear-gradient(135deg, #ffdce8 0%, #ffe7f3 100%);
+}

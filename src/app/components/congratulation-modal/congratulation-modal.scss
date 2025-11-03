@@ -1,0 +1,105 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  direction: rtl;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 16px 16px 0 0;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.grade-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.grade-circle {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.3);
+}
+
+.grade-letter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
+.grade-percentage {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 4px;
+}
+
+.grade-message {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stats-section {
+  h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text
