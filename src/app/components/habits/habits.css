@@ -1,5 +1,6 @@
-*{
-  font-family: 'Iranian Sans', sans-serif !important;
+body {
+  font-family: 'Vazirmatn', 'Shabnam', sans-serif;
+
 }
 
 .habit-container {
@@ -104,7 +105,8 @@
   text-align: right;
   font-size: 1rem;
   font-weight: 500;
-  font-family: 'Iranian Sans', sans-serif;
+  font-family: 'Vazirmatn', 'Shabnam', sans-serif;
+
 }
 
 

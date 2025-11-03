@@ -1,25 +1,21 @@
-* {
+body {
+  background-color: #4ade80;
+  margin: 0;
+  padding: 0;
   font-family: 'Vazirmatn', 'Shabnam', sans-serif;
 }
-
-/* ظرف اصلی صفحه افزودن عادت */
+/*  صفحه افزودن عادت */
 .add-habit-container {
-  min-height: 75vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 1rem;
   box-sizing: border-box;
   position: relative;
-
-  /* 🎨 پس‌زمینه سبز نعنایی پاستلی، بدون گرادیان‌های تند */
-  background-color: #eafff3; /* رنگ ثابت و یکنواخت */
-  /* اگر می‌خوای یه حس لطیف‌تر و زنده‌تر بده: */
-  background-image: radial-gradient(circle at 30% 10%, rgba(255,255,255,0.3), transparent 70%);
-  background-repeat: no-repeat;
+  background-color: #4ade80;
 }
 
-/* 💫 حرکت نرم نور (اختیاری برای ایجاد عمق پاستلی، کاملاً ظریف) */
 @keyframes bgMove {
   0% {
     background-position: 0% 100%;
@@ -32,7 +28,6 @@
   }
 }
 
-/* کارت اصلی افزودن عادت با افکت Glassmorphism */
 .add-habit-card {
   backdrop-filter: blur(18px);
   background: rgba(255, 255, 255, 0.4);
@@ -48,7 +43,7 @@
   position: relative;
 }
 
-/* ===== هدر کارت ===== */
+
 .add-habit-header {
   display: flex;
   flex-direction: row-reverse;
@@ -66,7 +61,7 @@
   text-align: right;
 }
 
-/* دکمه برگشت */
+
 .back-btn {
   background: rgba(255, 255, 255, 0.5);
   border: none;
@@ -85,16 +80,16 @@
   transform: scale(1.1);
 }
 
-/* ===== فرم اصلی ===== */
+
 .add-habit-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   text-align: right;
-  direction: rtl; /* محتویات راست‌چین */
+  direction: rtl;
+
 }
 
-/* ورودی‌ها */
 .habit-input {
   border: none;
   border-radius: 12px;
@@ -109,14 +104,16 @@
   transition: all 0.3s ease;
   text-align: right;
   background-color: rgba(255, 255, 255, 0.6);
+  font-family: 'Vazirmatn', 'Shabnam', sans-serif;
+
 }
 
 .habit-input::placeholder {
-  text-align: right; /* متن placeholder فارسی */
+  text-align: right;
   color: #777;
 }
 
-/* ===== دکمه ارسال ===== */
+
 .submit-btn {
   margin-top: 1.6rem;
   align-self: flex-end;
@@ -127,6 +124,7 @@
   cursor: pointer;
   color: #333;
   font-weight: 500;
+  font-family: 'Vazirmatn', 'Shabnam', sans-serif;
   box-shadow:
     inset 1px 1px 3px rgba(255, 255, 255, 0.6),
     0 6px 12px rgba(0, 0, 0, 0.1);
@@ -139,7 +137,6 @@
   transform: translateY(-2px);
 }
 
-/* ===== کلاس رنگ صورتی اپشنال برای تم خاص ===== */
 .pink {
   background: linear-gradient(135deg, #ffdce8 0%, #ffe7f3 100%);
 }

@@ -47,12 +47,3 @@
     </div>
   </div>
 </div>
-
-<!--<app-failure-modal (cancel)="onFailureCancel()"></app-failure-modal>-->
-
-<app-congratulation-modal
-  *ngIf="showCongratulationModal"
-  [stats]="currentStats"
-  [grade]="currentGrade"
-  (close)="handleCongratulationClose($event)"
-></app-congratulation-modal>

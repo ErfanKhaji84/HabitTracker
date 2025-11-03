@@ -2,12 +2,11 @@ import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ChelehStats, Day, DayStatus, GradeData} from './cheleh.model';
 import {FailureModal} from '../failure-modal/failure-modal';
-import {CongratulationModal} from '../congratulation-modal/congratulation-modal';
 
 @Component({
   selector: 'app-cheleh-tracker',
   standalone: true,
-  imports: [CommonModule, CongratulationModal],
+  imports: [CommonModule],
   templateUrl: './cheleh-tracker.html',
   styleUrls: ['./cheleh-tracker.scss']
 })
